@@ -1,0 +1,218 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="BMBOD" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1485,812" sap2010:WorkflowViewState.IdRef="BMBOD_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="BMBOD" sap:VirtualizedContainerService.HintSize="512,696" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="urlFinacle" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="URL Finacle" CacheStrategy="None" DisplayName="Get Asset" FolderPath="nestorzamili@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[urlFinacle]</OutArgument>
+      </ui:GetRobotAsset.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetRobotAsset>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Finacle Universal Banking Solution" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="4dccb5b7-e4a5-41dd-8579-351db1065209" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,311" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="0.2" DisplayName="Type Into 'Enter keyword&quot;'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4dccb5b7-e4a5-41dd-8579-351db1065209" Text="BMBOD" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://ceria-finacle-haproxy-1.bri.co.id:14441/fininfra/SSOServlet" CVScreenId="d925c07e-ada1-4c28-b59d-280b6f5fb546" CvElementArea="1441, 189, 254, 27" CvType="InputBox" DesignTimeRectangle="1445, 189, 246, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl id='menuSelect' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl id='menuSelect' tag='INPUT' type='text' class='dijitReset dijitInputInner' aaname='' /&gt;" Guid="2a8389e9-4009-4dc3-ac63-76d7d6ff688e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finacle Universal Banking Solution' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="d925c07e-ada1-4c28-b59d-280b6f5fb546" CvTextArea="1747, 185, 47, 19" CvTextArgument="Infosys&quot;" CvType="Text" DesignTimeRectangle="1746, 184, 48, 19" ElementType="Text" Guid="bda40a59-8858-4dea-8a68-2daf2781d0ad" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(Down)][u(hk)][d(hk)][k(Enter)][u(hk)]" Version="V3">
+              <uix:NKeyboardShortcuts.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NKeyboardShortcuts.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NKeyboardShortcuts>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4dccb5b7-e4a5-41dd-8579-351db1065209" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://ceria-finacle-haproxy-1.bri.co.id:14441/finbranch/uxcore" CVScreenId="33dbf698-c728-4fcf-953e-92259726344c" CvElementArea="1441, 696, 82, 42" CvTextArea="1459, 711, 46, 12" CvTextArgument="SUBMIT" CvType="Button" DesignTimeRectangle="1444, 699, 76, 36" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl name='Core_BRIPREPR' tag='IFRAME' /&gt;&lt;webctrl id='UX' tag='IFRAME' /&gt;&lt;webctrl name='formArea' tag='IFRAME' /&gt;&lt;webctrl id='_submit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl name='Core_BRIPREPR' tag='IFRAME' /&gt;&lt;webctrl id='UX' tag='IFRAME' /&gt;&lt;webctrl name='formArea' tag='IFRAME' /&gt;&lt;webctrl id='_submit' tag='BUTTON' type='button' class='bttn bttn-raised bttn-primary' aaname='Submit' check:innerText='SUBMIT' /&gt;" Guid="53e92c85-751b-40ca-b91f-7f503b0b5988" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finacle Universal Banking Solution' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="33dbf698-c728-4fcf-953e-92259726344c" CvElementArea="1353, 696, 82, 42" CvTextArea="1370, 711, 47, 12" CvTextArgument="CANCEL" CvType="Button" DesignTimeRectangle="1356, 699, 76, 36" ElementType="Button" FullSelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl name='Core_BRIPREPR' tag='IFRAME' /&gt;&lt;webctrl id='UX' tag='IFRAME' /&gt;&lt;webctrl name='formArea' tag='IFRAME' /&gt;&lt;webctrl id='_clear' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl name='Core_BRIPREPR' tag='IFRAME' /&gt;&lt;webctrl id='UX' tag='IFRAME' /&gt;&lt;webctrl name='formArea' tag='IFRAME' /&gt;&lt;webctrl id='_clear' tag='BUTTON' type='button' class='bttn bttn-raised bttn-primary' aaname='Cancel' check:innerText='CANCEL' /&gt;" Guid="71d44b89-ec83-4768-b4bd-8a8f7868980f" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NTakeScreenshot DelayBeforeScreenshot="3" DisplayName="Take Screenshot 'Chrome Legacy Window'" FileName="Images\screenshot.jpg" FileNameMode="None" sap:VirtualizedContainerService.HintSize="354,50" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="4dccb5b7-e4a5-41dd-8579-351db1065209" Version="V3">
+              <uix:NTakeScreenshot.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, 147, 1920, 893" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' check:text='Chrome Legacy Window' /&gt;" Guid="2d5d5077-1197-452e-96c8-d1a4be70f840" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Finacle Universal Banking Solution - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="UIA" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTakeScreenshot.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTakeScreenshot>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="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" Selector="&lt;html app='chrome.exe' title='Finacle Universal Banking Solution' /&gt;" Title="Finacle Universal Banking Solution" Url="[urlFinacle]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
