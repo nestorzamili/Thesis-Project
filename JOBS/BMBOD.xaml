@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="BMBOD" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1485,812" sap2010:WorkflowViewState.IdRef="BMBOD_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="BMBOD" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1175,969" sap2010:WorkflowViewState.IdRef="BMBOD_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -39,6 +39,7 @@
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -86,9 +87,15 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="BMBOD" sap:VirtualizedContainerService.HintSize="512,696" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="BMBOD" sap:VirtualizedContainerService.HintSize="512,904" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="urlFinacle" />
     </Sequence.Variables>
@@ -97,7 +104,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="URL Finacle" CacheStrategy="None" DisplayName="Get Asset" FolderPath="nestorzamili@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="URL Finacle" CacheStrategy="None" DisplayName="Get Asset 'URL Finacle'" FolderPath="nestorzamili@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[urlFinacle]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -108,23 +115,26 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Finacle Universal Banking Solution" sap:VirtualizedContainerService.HintSize="450,551" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="4dccb5b7-e4a5-41dd-8579-351db1065209" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Finacle Universal Banking Solution" sap:VirtualizedContainerService.HintSize="450,759" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="4dccb5b7-e4a5-41dd-8579-351db1065209" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,311" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,519" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Default="D:\EOD-CERIA\Images\screenshot.jpg" Name="imgPath" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="0.2" DisplayName="Type Into 'Enter keyword&quot;'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4dccb5b7-e4a5-41dd-8579-351db1065209" Text="BMBOD" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="0.2" DisplayName="Type Into 'BMBOD'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4dccb5b7-e4a5-41dd-8579-351db1065209" Text="BMBOD" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://ceria-finacle-haproxy-1.bri.co.id:14441/fininfra/SSOServlet" CVScreenId="d925c07e-ada1-4c28-b59d-280b6f5fb546" CvElementArea="1441, 189, 254, 27" CvType="InputBox" DesignTimeRectangle="1445, 189, 246, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl id='menuSelect' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl id='menuSelect' tag='INPUT' type='text' class='dijitReset dijitInputInner' aaname='' /&gt;" Guid="2a8389e9-4009-4dc3-ac63-76d7d6ff688e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finacle Universal Banking Solution' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="d925c07e-ada1-4c28-b59d-280b6f5fb546" CvTextArea="1747, 185, 47, 19" CvTextArgument="Infosys&quot;" CvType="Text" DesignTimeRectangle="1746, 184, 48, 19" ElementType="Text" Guid="bda40a59-8858-4dea-8a68-2daf2781d0ad" SearchSteps="CV" TargetType="ComputerVisionBased" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -169,7 +179,7 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://ceria-finacle-haproxy-1.bri.co.id:14441/finbranch/uxcore" CVScreenId="33dbf698-c728-4fcf-953e-92259726344c" CvElementArea="1441, 696, 82, 42" CvTextArea="1459, 711, 46, 12" CvTextArgument="SUBMIT" CvType="Button" DesignTimeRectangle="1444, 699, 76, 36" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl name='Core_BRIPREPR' tag='IFRAME' /&gt;&lt;webctrl id='UX' tag='IFRAME' /&gt;&lt;webctrl name='formArea' tag='IFRAME' /&gt;&lt;webctrl id='_submit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl name='Core_BRIPREPR' tag='IFRAME' /&gt;&lt;webctrl id='UX' tag='IFRAME' /&gt;&lt;webctrl name='formArea' tag='IFRAME' /&gt;&lt;webctrl id='_submit' tag='BUTTON' type='button' class='bttn bttn-raised bttn-primary' aaname='Submit' check:innerText='SUBMIT' /&gt;" Guid="53e92c85-751b-40ca-b91f-7f503b0b5988" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finacle Universal Banking Solution' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="33dbf698-c728-4fcf-953e-92259726344c" CvElementArea="1353, 696, 82, 42" CvTextArea="1370, 711, 47, 12" CvTextArgument="CANCEL" CvType="Button" DesignTimeRectangle="1356, 699, 76, 36" ElementType="Button" FullSelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl name='Core_BRIPREPR' tag='IFRAME' /&gt;&lt;webctrl id='UX' tag='IFRAME' /&gt;&lt;webctrl name='formArea' tag='IFRAME' /&gt;&lt;webctrl id='_clear' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl name='Core_BRIPREPR' tag='IFRAME' /&gt;&lt;webctrl id='UX' tag='IFRAME' /&gt;&lt;webctrl name='formArea' tag='IFRAME' /&gt;&lt;webctrl id='_clear' tag='BUTTON' type='button' class='bttn bttn-raised bttn-primary' aaname='Cancel' check:innerText='CANCEL' /&gt;" Guid="71d44b89-ec83-4768-b4bd-8a8f7868980f" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -192,7 +202,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NTakeScreenshot DelayBeforeScreenshot="3" DisplayName="Take Screenshot 'Chrome Legacy Window'" FileName="Images\screenshot.jpg" FileNameMode="None" sap:VirtualizedContainerService.HintSize="354,50" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="4dccb5b7-e4a5-41dd-8579-351db1065209" Version="V3">
+            <uix:NTakeScreenshot DelayBeforeScreenshot="3" DisplayName="Take Screenshot 'Chrome Legacy Window'" FileName="[imgPath]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="354,258" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="4dccb5b7-e4a5-41dd-8579-351db1065209" Version="V3">
               <uix:NTakeScreenshot.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="8, 147, 1920, 893" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' check:text='Chrome Legacy Window' /&gt;" Guid="2d5d5077-1197-452e-96c8-d1a4be70f840" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Finacle Universal Banking Solution - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="UIA" Version="V3" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -202,7 +212,7 @@
               </uix:NTakeScreenshot.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>

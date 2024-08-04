@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LOGIN" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1123,1844" sap2010:WorkflowViewState.IdRef="LOGIN_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LOGIN" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1175,1093" sap2010:WorkflowViewState.IdRef="LOGIN_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -95,7 +95,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LOGIN" sap:VirtualizedContainerService.HintSize="1112,1779" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LOGIN" sap:VirtualizedContainerService.HintSize="1112,1028" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="urlFinacle" />
       <Variable x:TypeArguments="x:String" Name="userId" />
@@ -106,27 +106,62 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="URL Finacle" CacheStrategy="None" DisplayName="Get Asset" FolderPath="nestorzamili@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="1050,175" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
-      <ui:GetRobotAsset.Value>
-        <OutArgument x:TypeArguments="x:String">[urlFinacle]</OutArgument>
-      </ui:GetRobotAsset.Value>
-    </ui:GetRobotAsset>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="User Finacle" CacheStrategy="None" DisplayName="Get Credential" FolderPath="nestorzamili@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="1050,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[userId]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Finacle Universal Banking Solution" sap:VirtualizedContainerService.HintSize="1050,1341" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="005ff506-3e56-4c8c-9915-d6150dc9ac77" Version="V2" WindowResize="Maximize">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1101" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1050,57" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+      <ui:RetryScope.ActivityBody>
+        <ActivityAction>
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Check Login Page'" sap:VirtualizedContainerService.HintSize="954,1011" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="005ff506-3e56-4c8c-9915-d6150dc9ac77" Version="V3">
+            <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="URL Finacle" CacheStrategy="None" DisplayName="Get Asset 'URL Finacle'" FolderPath="nestorzamili@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+              <ui:GetRobotAsset.Value>
+                <OutArgument x:TypeArguments="x:String">[urlFinacle]</OutArgument>
+              </ui:GetRobotAsset.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:GetRobotAsset>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="User Finacle" CacheStrategy="None" DisplayName="Get Credential" FolderPath="nestorzamili@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[password]" Username="[userId]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:GetRobotCredential>
+          </Sequence>
+        </ActivityAction>
+      </ui:RetryScope.ActivityBody>
+      <ui:RetryScope.Condition>
+        <ActivityFunc x:TypeArguments="x:Boolean" />
+      </ui:RetryScope.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:RetryScope>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Finacle Universal Banking Solution" sap:VirtualizedContainerService.HintSize="1050,883" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="005ff506-3e56-4c8c-9915-d6150dc9ac77" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,643" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Check Login Page'" sap:VirtualizedContainerService.HintSize="954,553" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="005ff506-3e56-4c8c-9915-d6150dc9ac77" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,769" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,311" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -160,7 +195,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="005ff506-3e56-4c8c-9915-d6150dc9ac77" Text="[userId]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="005ff506-3e56-4c8c-9915-d6150dc9ac77" Text="[userId]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://ceria-finacle-haproxy-1.bri.co.id:14441/fininfra/SSOServlet?CALLTYPE=GET_LOGIN_PAGE&amp;LCLANG=INFENG" CVScreenId="e708d632-2ff2-4f9d-93c0-8135e696106e" CvElementArea="891, 465, 151, 23" CvType="InputBox" DesignTimeRectangle="892, 466, 150, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='usertxt' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='usertxt' type='text' tag='INPUT' class='txtbox' aaname='' /&gt;" Guid="afc4f142-5300-4f00-bf6c-f24fac35adbe" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finacle Universal Banking Solution' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -182,12 +217,12 @@
                     </uix:NTypeInto.VerifyOptions>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="005ff506-3e56-4c8c-9915-d6150dc9ac77" SecureText="[password]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="005ff506-3e56-4c8c-9915-d6150dc9ac77" SecureText="[password]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://ceria-finacle-haproxy-1.bri.co.id:14441/fininfra/SSOServlet?CALLTYPE=GET_LOGIN_PAGE&amp;LCLANG=INFENG" CVScreenId="e708d632-2ff2-4f9d-93c0-8135e696106e" CvElementArea="891, 499, 152, 24" CvType="InputBox" DesignTimeRectangle="892, 501, 150, 21" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='passtxt' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='passtxt' type='password' tag='INPUT' class='txtbox' aaname='' /&gt;" Guid="71627a08-7b1f-4e70-821a-9b1535b009e1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finacle Universal Banking Solution' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -209,7 +244,7 @@
                     </uix:NTypeInto.VerifyOptions>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -244,7 +279,7 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,483" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,254" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -278,7 +313,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="005ff506-3e56-4c8c-9915-d6150dc9ac77" SecureText="[password]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="005ff506-3e56-4c8c-9915-d6150dc9ac77" SecureText="[password]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://ceria-finacle-haproxy-1.bri.co.id:14441/fininfra/SSOServlet?CALLTYPE=GET_LOGIN_PAGE&amp;LCLANG=INFENG" CVScreenId="e708d632-2ff2-4f9d-93c0-8135e696106e" CvElementArea="891, 499, 152, 24" CvType="InputBox" DesignTimeRectangle="892, 501, 150, 21" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='passtxt' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='loginFrame' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='passtxt' type='password' tag='INPUT' class='txtbox' aaname='' /&gt;" Guid="71627a08-7b1f-4e70-821a-9b1535b009e1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finacle Universal Banking Solution' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -300,7 +335,7 @@
                     </uix:NTypeInto.VerifyOptions>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
